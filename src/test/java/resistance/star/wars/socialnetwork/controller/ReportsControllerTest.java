@@ -10,14 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import resistance.star.wars.socialnetwork.exception.RebelNotFoundException;
-import resistance.star.wars.socialnetwork.exception.TradeException;
-import resistance.star.wars.socialnetwork.exception.TradeItemNotFoundOnRebelInventoryException;
 import resistance.star.wars.socialnetwork.model.dto.ReportDTO;
-import resistance.star.wars.socialnetwork.model.dto.ResourceDTO;
-import resistance.star.wars.socialnetwork.model.dto.TradeDTO;
-import resistance.star.wars.socialnetwork.model.dto.TradeRebelDTO;
 import resistance.star.wars.socialnetwork.model.entity.Location;
 import resistance.star.wars.socialnetwork.model.entity.Rebel;
 import resistance.star.wars.socialnetwork.model.entity.Resource;
@@ -30,10 +25,8 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.ANY)

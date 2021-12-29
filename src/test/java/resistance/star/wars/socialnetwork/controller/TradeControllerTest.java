@@ -2,7 +2,6 @@ package resistance.star.wars.socialnetwork.controller;
 
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
@@ -11,9 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import resistance.star.wars.socialnetwork.exception.RebelNotFoundException;
-import resistance.star.wars.socialnetwork.exception.RebelNotHaveEnoughResourcesException;
 import resistance.star.wars.socialnetwork.exception.TradeException;
 import resistance.star.wars.socialnetwork.exception.TradeItemNotFoundOnRebelInventoryException;
 import resistance.star.wars.socialnetwork.model.dto.ResourceDTO;
@@ -29,12 +27,10 @@ import resistance.star.wars.socialnetwork.model.enumeration.ResourceTypeEnum;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.ANY)
