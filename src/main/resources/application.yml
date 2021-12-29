@@ -1,1 +1,18 @@
-
+server:
+  port: 8090
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:star_wars_resistance_db
+    username: luke
+    password:
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.H2Dialect
+      ddl-auto: create-drop
+    show-sql: true
+  messages:
+    basename: i18n/messages
+logging:
+  level:
+    resistance.star.wars.socialnetwork: DEBUG
